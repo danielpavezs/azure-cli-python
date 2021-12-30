@@ -1,0 +1,4 @@
+knack
+packaging
+azure-cli-core
+azure-cli
