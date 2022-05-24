@@ -47,3 +47,19 @@
   ```bash
   time python3 createSubnetNSG.py <userName> <userPassword> <tenantId>
   ```
+
+## createUDR
+
+- **Description**: The following code maintains the necessary route tables to route the network traffic to an Azure Firewall appliance. The main idea is to add this code to an Azure Automation Account and run it using a Service Principal credential. On line `140` it sees the required input, which is: the service principal id, the service principal password and the tenant id (in that order).
+- **Execution**:
+  ```bash
+  time python3 createUDR.py <servicePrincipalId> <servicePrincipalPassword> <tenantId>
+  ```
+- **Login using my account**: If you want to use your username and password to log in, you need to change line `9` to:
+  ```python
+      commnd = f'login -u {uN} -p {uP} --tenant {tI}'
+  ```
+  And then, execute the code as follows:
+  ```bash
+  time python3 createUDR.py <userName> <userPassword> <tenantId>
+  ```
